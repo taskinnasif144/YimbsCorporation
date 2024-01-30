@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <main className="min-h-screen w-[full] ">
       <div className="">
-        <Hero />
+        {/* <Hero /> */}
         {width < 720 ? (
           <ForHomeMobile />
         ) : (
