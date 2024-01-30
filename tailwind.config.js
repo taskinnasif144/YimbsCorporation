@@ -11,11 +11,11 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
       },
       screens: {
-        xs: "520px",
-        sm: "700px",
+        xs: "480px",
+        sm: "768px",
         // => @media (min-width: 576px) { ... }
 
-        md: "1040px",
+        md: "1024px",
         // => @media (min-width: 960px) { ... }
 
         lg: "1440px",

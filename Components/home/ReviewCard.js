@@ -5,12 +5,16 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 
-function ReviewCard({ customerData, index, selectedId }) {
+function ReviewCard({ customerData, index, selectedId, animated }) {
   return (
     <motion.div
       layoutId={index}
-      onClick={() => selectedId(index)}
-      className="min-w-[300px] min-h-[260px] bg-[#D9D9D9] px-4 py-3 rounded-lg shadow-xl text-black mx-4 my-6">
+      onClick={animated ? () => selectedId(null) : () => selectedId(index)}
+      className={`bg-[#D9D9D9] px-4 py-3 rounded-lg shadow-xl text-black mx-4 my-6 ${
+        animated
+          ? "w-[500px] h-[300px] absolute top-[20%] left-[33%]"
+          : "min-w-[300px] min-h-[260px]"
+      }`}>
       <motion.div className="flex items-center">
         <motion.img
           src={customerData.image}
@@ -28,10 +32,16 @@ function ReviewCard({ customerData, index, selectedId }) {
         </motion.div>
       </motion.div>
       <motion.div className="translate-y-[-20px] text-start">
-        <motion.span>{customerData.review.substring(0, 200)}</motion.span>
-        <motion.span className="text-[12px] text-gray-500 text-end">
-          ....see more
+        <motion.span>
+          {animated
+            ? customerData.review
+            : customerData.review.substring(0, 200)}
         </motion.span>
+        {!animated && (
+          <motion.span className="text-[12px] text-gray-500 text-end">
+            ....see more
+          </motion.span>
+        )}
       </motion.div>
     </motion.div>
   );

@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} box-border m-0 bg-[#202020] font-poppins`}>
+        className={`${inter.className} box-border bg-[#202020] font-poppins `}>
         <Navbar />
         {children}
       </body>
