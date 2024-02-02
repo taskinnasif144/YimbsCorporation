@@ -19,7 +19,7 @@ function ForHome({ title, array }) {
       <h3 className="text-[35px] mb-4"> {title}</h3>
       <div className="relative">
         <div
-          className="flex overflow-hidden overflow-x-scroll noScrollBar flex-nowrap "
+          className="flex overflow-hidden overflow-x-scroll noScrollBar flex-nowrap"
           ref={parent}>
           {array.map((service, index) => {
             return (

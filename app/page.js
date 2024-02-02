@@ -25,22 +25,32 @@ export default function Home() {
   }
 
   useEffect(() => {
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <main className="min-h-screen w-[full] ">
+    <main className="min-h-screen w-[full] max-w-[1440px] m-auto">
       <div className="">
         <Hero />
-        {/* added comment */}
         {width < 720 ? (
-          <ForHomeMobile />
+          <ForHomeMobile title={"For Home"} array={forHomeServices} />
         ) : (
           <ForHome title={"For Home"} array={forHomeServices} />
         )}
+        {width < 720 ? (
+          <ForHomeMobile
+            title={"Trending Services"}
+            array={[...forHomeServices].reverse()}
+          />
+        ) : (
+          <ForHome
+            title={"Trending Services"}
+            array={[...forHomeServices].reverse()}
+          />
+        )}
 
-        {/* <ForHome title={"Trending Services"} array={forHomeServices} /> */}
         <WhyYimbs />
         <CustomerReviews />
         <DownloadApp />

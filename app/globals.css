@@ -37,9 +37,20 @@ body {
 
 }
 
+.unselectable {
+  -webkit-user-select: none;
+  /* Chrome, Opera, Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE/Edge */
+  user-select: none;
+  /* Standard syntax */
+}
+
 
 .text-bg-gradient {
-  background: linear-gradient(90deg, transparent 0%, white, transparent 80%);
+  background: linear-gradient(90deg, transparent 0%, white, transparent 99%);
 }
 
 

@@ -10,7 +10,7 @@ function ReviewCard({ customerData, index, selectedId, animated }) {
     <motion.div
       layoutId={index}
       onClick={animated ? () => selectedId(null) : () => selectedId(index)}
-      className={`bg-[#D9D9D9] px-4 py-3 rounded-lg shadow-xl text-black mx-4 my-6 ${
+      className={`bg-[#D9D9D9] px-4 py-3 rounded-lg shadow-xl text-black mx-4 my-6 unselectable ${
         animated
           ? "w-[500px] h-[300px] absolute top-[20%] left-[33%]"
           : "min-w-[300px] min-h-[260px]"

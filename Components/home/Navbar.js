@@ -20,6 +20,7 @@ function Navbar() {
   }
 
   useEffect(() => {
+    handleResize();
     window.addEventListener("scroll", updateScrollY);
     window.addEventListener("resize", handleResize);
 
@@ -100,12 +101,12 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link className="mr-4 text-lg" href="/">
+                <Link className="mr-4 text-sm md:text-lg" href="/">
                   Service
                 </Link>
               </li>
               <li>
-                <Link className="text-lg" href="/">
+                <Link className="text-sm md:text-lg" href="/">
                   Login
                 </Link>
               </li>
