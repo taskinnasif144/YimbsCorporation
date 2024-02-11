@@ -37,6 +37,11 @@ body {
 
 }
 
+.gradient-grey_to_black {
+  background: linear-gradient(#202020 40%, black);
+
+}
+
 .unselectable {
   -webkit-user-select: none;
   /* Chrome, Opera, Safari */

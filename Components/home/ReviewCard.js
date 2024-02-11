@@ -21,7 +21,7 @@ function ReviewCard({ customerData, index, selectedId, animated }) {
           width={80}
           height={80}
           alt="Image of one of the customers"
-          className="rounded-full h-[80px] w-{80px} object-center border-4 border-black translate-y-[-50%]"
+          className="rounded-full h-[80px] w-{80px} object-center border-4 border-white translate-y-[-50%]"
         />
 
         <motion.div className="ml-4 text-left translate-y-[-15px]">

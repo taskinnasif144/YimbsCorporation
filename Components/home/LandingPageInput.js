@@ -15,7 +15,6 @@ function LandingPageInput() {
     const filtered = servicesArray.filter((suggestion) => {
       return suggestion.toString().toLowerCase().includes(input.toLowerCase());
     });
-    console.log(filtered);
     setFilteredSuggestions(filtered);
     setShowSuggestions(true);
     if (input.length === 0) {
@@ -33,7 +32,7 @@ function LandingPageInput() {
         onChange={handleInput}
       />
       {showSuggestions && filteredSuggestions.length > 0 ? (
-        <ul className="absolute  top-[120%]  bg-white w-[70%] p-2 rounded-sm shadow-lg max-h-[500px] overflow-y-auto">
+        <ul className="absolute  top-[120%]  bg-white w-[70%] p-2 rounded-sm shadow-lg max-h-[500px] overflow-y-auto z-50">
           {filteredSuggestions.map((suggestion, index) => {
             return (
               <li
