@@ -154,15 +154,18 @@ const keyWords = [
 ];
 
 const forHomeServices = [
-  { title: "AC Installation", path: "/ac-logo.jpg" },
-  { title: "Desktop Service", path: "/desktop.jpg" },
-  { title: "Fridge Repair", path: "/fridge.webp" },
-  { title: "Laptop Services", path: "/laptop-repair.jpg" },
-  { title: "Oven Servicing", path: "/Oven-repair.jpg" },
-  { title: "Sink Installation", path: "/Sink-reapir.jpg" },
-  { title: "TV Repair", path: "/tv-repair.jpg" },
-  { title: "Washing Machine Servicing", path: "/washing-machine.jpg" },
-  { title: "Water Purifier Installation", path: "/water-purifier.jpg" },
+  { title: "AC Installation", path: "/services/ac-logo.jpg" },
+  { title: "Desktop Service", path: "/services/desktop.jpg" },
+  { title: "Fridge Repair", path: "/services/fridge.webp" },
+  { title: "Laptop Services", path: "/services/laptop-repair.jpg" },
+  { title: "Oven Servicing", path: "/services/Oven-repair.jpg" },
+  { title: "Sink Installation", path: "/services/Sink-reapir.jpg" },
+  { title: "TV Repair", path: "/services/tv-repair.jpg" },
+  { title: "Washing Machine Servicing", path: "/services/washing-machine.jpg" },
+  {
+    title: "Water Purifier Installation",
+    path: "/services/water-purifier.jpg",
+  },
 ];
 
 const customerReview = [

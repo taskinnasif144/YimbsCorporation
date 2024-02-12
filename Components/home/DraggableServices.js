@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import img from "../../public/ac-logo.jpg";
 
 function DraggableServices({ title, path, id }) {
   return (

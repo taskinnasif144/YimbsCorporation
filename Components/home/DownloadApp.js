@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import DownloadButton from "./DownloadButton";
 
 function DownloadApp() {
   return (
@@ -38,6 +39,7 @@ function DownloadApp() {
           </button>
         </div>
         <h4 className="m-2">You will Fet an SMS with the App Download Link</h4>
+        <DownloadButton />
       </div>
     </section>
   );

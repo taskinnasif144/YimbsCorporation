@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import AcRepair from "../../public/ac-logo.jpg";
 
 import { motion, AnimatePresence } from "framer-motion";
 

@@ -53,6 +53,7 @@ export default function Home() {
 
         <WhyYimbs />
         <CustomerReviews />
+
         <DownloadApp />
         <RequestService />
         <footer>

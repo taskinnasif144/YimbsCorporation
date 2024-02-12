@@ -14,6 +14,7 @@ import RequestService from "./home/RequestServiec";
 import Footer1 from "./home/Footer1";
 import Footer2 from "./home/Footer2";
 import ForHomeMobile from "./home/ForHomeMobile";
+import DownloadButton from "./home/DownloadButton";
 
 export {
   Navbar,
@@ -32,4 +33,5 @@ export {
   RequestService,
   Footer1,
   Footer2,
+  DownloadButton,
 };
