@@ -13,7 +13,7 @@ function Hero2({ count }) {
   ];
 
   return (
-    <div className="w-full h-[600px] md:h-full text-center flex justify-between items-center flex-col py-[40px]">
+    <div className="w-full h-[500px] md:h-full text-center flex justify-between items-center flex-col py-4">
       <h3 className="text-[35px] md:text-[60px] text-white font-bold">
         Desrie To Done
       </h3>
@@ -66,7 +66,7 @@ function Hero2({ count }) {
         </AnimatePresence>
       </div>
       <div>
-        <h3 className="text-[30px] text-white  ">Welcome to Yimbs</h3>
+        <h3 className="text-[30px] text-white font-bold ">Welcome to Yimbs</h3>
       </div>
     </div>
   );
