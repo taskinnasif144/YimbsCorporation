@@ -14,9 +14,9 @@ function Hero1({ animating, count, onAnimationCompleted }) {
     "Appliances",
   ];
   return (
-    <div className="w-full h-full py-[30px] flex flex-col justify-around items-center">
-      <h2 className=" text-[28px] xs:text-[40px] lg:text-[60px] font-bold relative ">
-        <div className="flex items-center w-[290px] xs:w-[450px] lg:w-[600px]">
+    <div className="w-full py-3 flex flex-col justify-center items-center">
+      <h2 className=" text-xl sxs:text-2xl xs:text-4xl lg:text-6xl font-bold relative ">
+        <div className="flex items-center w-[210px] sxs:w-[290px] xs:w-[450px] lg:w-[600px]">
           Your
           <AnimatePresence>
             <div className="width-fit-conent inline-block ml-2 mr-2 relative overflow-hidden">
@@ -36,12 +36,12 @@ function Hero1({ animating, count, onAnimationCompleted }) {
             </div>
           </AnimatePresence>
         </div>
-        <div>
+        <div className="text-xl sxs:text-2xl xs:text-4xl lg:text-6xl">
           Service by One
           <motion.div
             className="inline-block ml-3"
-            initial={{ x: animating ? 0 : 50 }}
-            animate={{ x: animating ? 50 : 0 }}
+            initial={{ x: animating ? 0 : 30 }}
+            animate={{ x: animating ? 30 : 0 }}
             transition={{
               type: "spring",
               stiffness: 100,
@@ -51,7 +51,7 @@ function Hero1({ animating, count, onAnimationCompleted }) {
           </motion.div>
         </div>
       </h2>
-      <div className="w-full max-w-[500px]  sm:w-[70%]">
+      <div className="w-full max-w-[500px]  sm:w-[70%] md:pt-12">
         <VendorQuery />
         <KeyWords />
       </div>

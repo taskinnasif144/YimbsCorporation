@@ -14,13 +14,13 @@ function Footer2() {
     <div className="flex justify-between items-center w-full flex-col md:flex-row bg-black px-16 py-4">
       <div className="flex items-center">
         <Image
-          width={50}
-          height={50}
+          width={20}
+          height={20}
           src="/yimbs-logo.jpg"
           alt="logo of the website"
-          className="h-8 w-8"
+          className="h-4 w-4 sxs:h-8 sxs:w-8"
         />
-        <p className="ml-3 text-xs xs:text-sm sm:text-base md:text-lg">
+        <p className="ml-3 text-[10px] sxs:text-xs xs:text-sm sm:text-base md:text-lg">
           © 2023 | Yimbs Ltd. | All Rights Reserved
         </p>
       </div>
@@ -29,11 +29,11 @@ function Footer2() {
         <Image
           src="/clipArts/globe.png"
           alt="image of an globe"
-          width={100}
-          height={100}
-          className="bg-[#D9D9D9] border-white border-[1px] rounded-full h-4 w-4 xs:h-6 xs:w-6 my-3"
+          width={10}
+          height={10}
+          className="bg-[#D9D9D9] border-white border-[1px] rounded-full h-3 sxs:h-4 w-3 sxs:w-4 xs:h-6 xs:w-6 my-3"
         />
-        <p className="my-3 ml-2 mr-2">English</p>
+        <p className="my-3 ml-2 mr-2 text-[10px] sxs:text-sm">English</p>
 
         {footerImages.map((image, index) => {
           return (
@@ -41,9 +41,9 @@ function Footer2() {
               key={index}
               src={image}
               alt="image of logos"
-              width={100}
-              height={100}
-              className={`rounded-sm h-4 w-4 m-1 xs:h-6 xs:w-6 ${
+              width={10}
+              height={10}
+              className={`rounded-sm h-3 sxs:h-4 w-3 sxs:w-4 m-1 xs:h-6 xs:w-6 ${
                 usebg(image) ? "bg-white" : ""
               } `}
             />

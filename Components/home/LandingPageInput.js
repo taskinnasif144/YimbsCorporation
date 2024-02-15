@@ -23,7 +23,7 @@ function LandingPageInput() {
   };
 
   return (
-    <div className="p-[6px] px-[14px] lg:px-[32px] lg:py-[12px] bg-white rounded-[20px] relative">
+    <div className="p-1 px-2  text-xs sxs:p-1 sxs:px-3 sxs:text-base lg:px-[32px] lg:py-[12px] bg-white rounded-[20px] relative">
       <input
         className="bg-transparent outline-none w-full text-black"
         placeholder="eg. AC Service, PC service ..."
@@ -32,7 +32,7 @@ function LandingPageInput() {
         onChange={handleInput}
       />
       {showSuggestions && filteredSuggestions.length > 0 ? (
-        <ul className="absolute  top-[120%]  bg-white w-[70%] p-2 rounded-sm shadow-lg max-h-[500px] overflow-y-auto z-50">
+        <ul className="absolute  top-[120%]  bg-white w-[90%] min-w-40 text-xs sxs:text-base p-2 rounded-sm shadow-lg max-h-[500px] overflow-y-auto z-50">
           {filteredSuggestions.map((suggestion, index) => {
             return (
               <li

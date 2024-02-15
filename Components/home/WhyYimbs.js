@@ -9,7 +9,7 @@ function WhyYimbs() {
   return (
     <section className="flex flex-col md:justify-center md:items-center md:flex-row my-12 ">
       <motion.div className="flex flex-col justify-center items-center px-16">
-        <h4 className="bg-white text-black text-xl xs:text-2xl md:text-3xl p-2 px-8 w-full text-bg-gradient text-center">
+        <h4 className="bg-white text-black text-sm sxs:text-xl xs:text-2xl md:text-3xl p-2 px-8 w-full text-bg-gradient text-center">
           -Why Yimbs?
         </h4>
         <Image

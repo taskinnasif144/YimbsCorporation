@@ -22,17 +22,17 @@ function VendorQuery() {
 
   return (
     <div className="p-3 my-8 sm:p-6 bg-[#D9D9D9] rounded-lg ">
-      <h4 className="text-black text-[20px] lg:text-[30px] font-bold my-3">
+      <h4 className="text-black text-sm sxs:text-lg lg:text-[30px] font-bold my-3">
         What Are You Looking For?
       </h4>
       <LandingPageInput />
-      <div className="my-[12px] flex overflow-hidden">
+      <div className="my-2 sxs:my-4 flex overflow-hidden">
         <select
-          className="w-1/2 p-2 sm:p-[10px]  bg-white text-black text-sm sm:text-lg shadow-2xl"
+          className="w-1/2 p-[3px] sxs:p-2 sm:p-[10px]  bg-white text-black text-[10px] sxs:text-sm sm:text-lg shadow-2xl"
           name="division"
           id=""
           onChange={selectDivision}>
-          <option value="">--Select Division--</option>
+          <option value="">--Division--</option>
           {locations
             ? locations.map((location, index) => (
                 <option
@@ -45,10 +45,10 @@ function VendorQuery() {
             : ""}
         </select>
         <select
-          className="ml-2 w-1/2 p-2 sm:p-[10px]  bg-white text-black text-sm sm:text-lg shadow-2xl"
+          className="ml-2 w-1/2 p-[3px] sxs:p-2 sm:p-[10px]  bg-white text-black  text-[10px] sxs:text-sm sm:text-lg shadow-2xl"
           name="Area"
           id="">
-          <option value="">--Select Area--</option>
+          <option value="">--Area--</option>
           {areas.length !== 0
             ? areas.map((area, index) => (
                 <option key={index} value={area}>
@@ -59,8 +59,8 @@ function VendorQuery() {
         </select>
       </div>
       <div className="text-center">
-        <button className="text-white bg-black px-[12px] lg:px-[30px] py-[6px] lg:py-[12px] rounded-lg hover:bg-gray-800 ">
-          Get Started <SearchIcon />
+        <button className="text-white text-sm bg-black px-[12px] lg:px-[30px] py-[2px] sxs:py-2 lg:py-[12px] rounded-lg hover:bg-gray-800 ">
+          Get Started <SearchIcon className="text-base" />
         </button>
       </div>
     </div>

@@ -51,7 +51,7 @@ function Navbar() {
         {/*  Search-Bar hid, unhid*/}
 
         <div
-          className={`flex items-center transition-all bg-slate-100 px-4 py-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[30px] w-[300px] ${
+          className={` hidden md:flex items-center transition-all bg-slate-100 px-4 py-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[30px] w-[300px]  ${
             scrollY > 900 ? "scale-100" : "scale-0"
           } `}>
           <input
@@ -81,7 +81,7 @@ function Navbar() {
         </div>
 
         {/* Hamburger Icon */}
-        <div className="flex flex-col md:hidden" onClick={updateHam}>
+        <div className="flex flex-col md:hidden z-20" onClick={updateHam}>
           <span
             className={`h-[2px] w-6 bg-white inline-block transition-all ${
               hamAni ? "rotate-45 translate-y-1/2" : ""
@@ -105,22 +105,22 @@ function Navbar() {
       </nav>
       {/* Hamburger Drawer */}
       <div
-        className={`flex flex-col items-center bg-[#191E24] w-full my-2 ${
-          hamAni ? "" : "hidden"
+        className={`flex flex-col items-end bg-[#191E24] w-[60%] min-w-[200px] max-w-[350px] h-[100vh] fixed top-0 right-0 transition-all text-start pl-4 sxs:pl-6 ${
+          hamAni ? "translate-x-0" : "translate-x-[1000px]"
         }`}>
         <Link
           href={""}
-          className="my-2 py-2 transition-all duration-150 w-full text-center hover:bg-[#333333]   text-gray-400">
+          className="my-2 py-2 transition-all duration-150 w-full  mr-2 hover:bg-[#333333]  text-xs xs:text-lg px-3 rounded-lg mt-16  text-gray-400">
           Join As Proffessional
         </Link>
         <Link
           href={""}
-          className="my-2 py-2 transition-all duration-150 w-full text-center hover:bg-[#333333]  text-gray-400">
+          className="my-2 py-2 transition-all duration-150 w-full  mr-2 hover:bg-[#333333] text-xs xs:text-lg px-3 rounded-lg  text-gray-400">
           Services
         </Link>
         <Link
           href={""}
-          className="my-2 py-2 transition-all duration-150 w-full text-center hover:bg-[#333333]  text-gray-400">
+          className="my-2 py-2 transition-all duration-150 w-full  mr-2 hover:bg-[#333333]  text-xs xs:text-lg px-3 rounded-lg text-gray-400">
           Login
         </Link>
       </div>

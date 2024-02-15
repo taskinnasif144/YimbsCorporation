@@ -23,7 +23,9 @@ function CustomerReviews() {
   console.log(selectedId);
   return (
     <section className="text-center w-[80%] m-auto my-16 relative ">
-      <h2 className="text-5xl my-12">What Customers Says about Yimmbs!</h2>
+      <h2 className="text-xl sxs:text-3xl md:text-5xl my-12">
+        What Customers Says about Yimmbs!
+      </h2>
       <div className="flex">
         <button
           onClick={clickLeft}

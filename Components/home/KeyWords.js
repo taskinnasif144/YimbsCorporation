@@ -31,7 +31,7 @@ function KeyWords() {
           }
         })}
       </ul>
-      <button onClick={handleAction} className="ml-5">
+      <button onClick={handleAction} className="ml-5 text-[10px] sxs:text-sm">
         {seeMore ? "See Less ..." : "See More ..."}
       </button>
     </div>

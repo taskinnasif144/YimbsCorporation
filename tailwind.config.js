@@ -10,7 +10,9 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+
       screens: {
+        sxs: "300px",
         xs: "480px",
         sm: "768px",
         // => @media (min-width: 576px) { ... }

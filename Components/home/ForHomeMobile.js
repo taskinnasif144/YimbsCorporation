@@ -24,8 +24,8 @@ const ForHomeMobile = ({ title, array }) => {
 
   return (
     <div className="flex justify-center items-center flex-col my-12">
-      <h3 className="text-[35px] mb-4">{title}</h3>
-      <div className="text-center inline-block h-[300px] w-[300px] relative">
+      <h3 className=" text-3xl sxs:text-4xl mb-4">{title}</h3>
+      <div className="text-center inline-block h-[250px] w-[250px] sxs:h-[350px] sxs:w-[350px] relative">
         <button
           onClick={clickLeft}
           className="absolute top-[50%] left-0 z-10 translate-y-[-50%] h-full rounded-l-xl hover:bg-gray-400 px-2 hover:bg-opacity-40 transition-all duration-300">
@@ -43,7 +43,13 @@ const ForHomeMobile = ({ title, array }) => {
           src={array[counter].path}
           className="w-full h-full object-cover rounded-xl"
         />
-        <h4 className="text-xl mt-3 text-whtie">{array[counter].title}</h4>
+        <div className="mt-3 absolute -bottom-0 right-1/2 translate-x-1/2 ">
+          <div className="relative">
+            <h4 className="text-base sxs:text-xl text-black py-2 px-3 after:content-[''] after:w-full after:h-full after:bg-white after:absolute after:top-0 after:left-0 after:opacity-50 after:rounded-2xl after:-z-20">
+              {array[counter].title}
+            </h4>
+          </div>
+        </div>
         <button
           onClick={clickRight}
           className="absolute top-[50%] right-0 z-10 translate-y-[-50%] h-full rounded-r-xl hover:bg-gray-400 px-2 hover:bg-opacity-40 transition-all duration-300">

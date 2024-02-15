@@ -25,7 +25,7 @@ function Hero() {
   return (
     <section
       className={
-        "w-full   flex p-[40px] sm:pr-0 items-center md:h-[955px] flex-col md:flex-row gradient-black_to_grey "
+        "w-full  flex p-4 sxs:px-9 sxs:py-3 sm:pr-0 items-center flex-col md:flex-row gradient-black_to_grey "
       }>
       <Hero1
         animating={animating}

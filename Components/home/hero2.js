@@ -13,12 +13,12 @@ function Hero2({ count }) {
   ];
 
   return (
-    <div className="w-full h-[500px] md:h-full text-center flex justify-between items-center flex-col py-4">
-      <h3 className="text-[35px] md:text-[60px] text-white font-bold">
+    <div className="w-full text-center flex justify-center items-center flex-col py-4">
+      <h3 className="text-lg sxs:text-3xl md:text-6xl text-white font-bold">
         Desrie To Done
       </h3>
 
-      <div className="h-[350px] sm:h-[500px] lg:h-[950px] w-[100%] sm:w-[60%] md:w-[80%] overflow-hidden block relative lg:p-10">
+      <div className="h-[250px] sxs:h-[350px] sm:h-[500px] lg:h-[650px] w-[100%] sm:w-[60%] md:w-[80%] overflow-hidden block relative lg:px-10">
         <AnimatePresence>
           <motion.img
             key={count}
@@ -66,7 +66,9 @@ function Hero2({ count }) {
         </AnimatePresence>
       </div>
       <div>
-        <h3 className="text-[30px] text-white font-bold ">Welcome to Yimbs</h3>
+        <h3 className="text-lg sxs:text-3xl text-white font-bold pt-6 xs:pt-12">
+          Welcome to Yimbs
+        </h3>
       </div>
     </div>
   );
