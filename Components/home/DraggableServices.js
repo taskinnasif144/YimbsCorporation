@@ -3,7 +3,7 @@ import React from "react";
 
 function DraggableServices({ title, path, id }) {
   return (
-    <div className="text-center inline-block p-0 m-1 sm:p-3 sm:m-3 rounded-md sm:rounded-3xl unselectable">
+    <div className="text-center snap-center inline-block p-0 m-1 sm:p-3 sm:m-3 rounded-md sm:rounded-3xl unselectable">
       <Image
         src={path}
         alt={title}
