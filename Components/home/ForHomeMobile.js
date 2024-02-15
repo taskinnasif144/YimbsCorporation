@@ -25,7 +25,7 @@ const ForHomeMobile = ({ title, array }) => {
   return (
     <div className="flex justify-center items-center flex-col my-12">
       <h3 className=" text-3xl sxs:text-4xl mb-4">{title}</h3>
-      <div className="text-center inline-block h-[250px] w-[250px] sxs:h-[350px] sxs:w-[350px] relative">
+      <div className="text-center inline-block h-[350px] w-[80%]  relative">
         <button
           onClick={clickLeft}
           className="absolute top-[50%] left-0 z-10 translate-y-[-50%] h-full rounded-l-xl hover:bg-gray-400 px-2 hover:bg-opacity-40 transition-all duration-300">

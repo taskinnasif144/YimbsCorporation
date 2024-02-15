@@ -27,14 +27,14 @@ function CustomerReviews() {
         What Customers Says about Yimmbs!
       </h2>
       <div className="flex">
-        <button
+        {/* <button
           onClick={clickLeft}
           className="px-3 mx-2 hover:bg-white hover:bg-opacity-10 rounded-md transition-all duration-150">
           <ArrowBackIosIcon />
-        </button>
+        </button> */}
         <div
           ref={parent}
-          className="flex flex-row overflow-hidden overflow-x-scroll noScrollBar">
+          className="snap-mandatory snap-x flex flex-row overflow-hidden overflow-x-scroll noScrollBar scroll-smooth">
           {customerReview.map((review, index) => (
             <ReviewCard
               key={index + 1}
@@ -45,28 +45,12 @@ function CustomerReviews() {
             />
           ))}
         </div>
-        <button
+        {/* <button
           onClick={clickRight}
           className="px-3 mx-2 hover:bg-white hover:bg-opacity-10 rounded-md transition-all duration-150">
           <ArrowForwardIosIcon />
-        </button>
+        </button> */}
       </div>
-
-      <AnimatePresence>
-        {customerReview.map(
-          (review, index) =>
-            selectedId !== null &&
-            selectedId === index + 1 && (
-              <ReviewCard
-                key={index + 1}
-                customerData={review}
-                index={index + 1}
-                selectedId={handleSelection}
-                animated={true}
-              />
-            )
-        )}
-      </AnimatePresence>
     </section>
   );
 }
