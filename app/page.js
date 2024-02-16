@@ -34,11 +34,9 @@ export default function Home() {
     <main className="min-h-screen w-[full] max-w-[1440px] m-auto">
       <div className="">
         <Hero />
-        {width < 770 ? (
-          <ForHomeMobile title={"For Home"} array={forHomeServices} />
-        ) : (
-          <ForHome title={"For Home"} array={forHomeServices} />
-        )}
+
+        <ForHome title={"For Home"} array={forHomeServices} />
+
         {width < 770 ? (
           <ForHomeMobile
             title={"Trending Services"}

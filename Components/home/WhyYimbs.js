@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 
 function WhyYimbs() {
   return (
-    <section className="flex flex-col md:justify-center md:items-center md:flex-row my-12 ">
-      <motion.div className="flex flex-col justify-center items-center px-16">
+    <section className="flex flex-col md:justify-center md:items-center md:flex-row my-12 w-4/5 m-auto text-center">
+      <div className="flex flex-col justify-center items-center ">
         <h4 className="bg-white text-black text-sm sxs:text-xl xs:text-2xl md:text-3xl p-2 px-8 w-full text-bg-gradient text-center">
           -Why Yimbs?
         </h4>
@@ -19,9 +19,9 @@ function WhyYimbs() {
           height={800}
           className="m-auto"
         />
-      </motion.div>
+      </div>
       <div className="flex flex-col items-center">
-        <motion.div>
+        <div>
           <h4 className="text-2xl xs:text-4xl sm:text-6xl md:text-4xl from-neutral-600 mb-5 ">
             Where Needs Connect!{" "}
           </h4>
@@ -29,14 +29,14 @@ function WhyYimbs() {
             {whyYimbns.map((element, index) => {
               return (
                 <li
-                  className="text-sm xs:text-base sm:text-2xl md:text-lg"
+                  className="text-[12px] sxs:text-sm xs:text-base sm:text-2xl md:text-lg text-start"
                   key={index}>
                   {element}
                 </li>
               );
             })}
           </ul>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

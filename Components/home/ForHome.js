@@ -2,43 +2,68 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import DraggableServices from "./DraggableServices";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import { motion, useAnimationControls } from "framer-motion";
 
 function ForHome({ title, array }) {
   const parent = useRef();
+  const observer = useRef();
+  const controls = useAnimationControls();
+  const [width, setWidth] = useState(0);
 
-  function clickLeft() {
-    parent.current.scrollBy({ left: -350, behavior: "smooth" });
-  }
-  function clickRight() {
-    parent.current.scrollBy({ left: 350, behavior: "smooth" });
-  }
+  const updateWidth = () => {
+    setWidth(parent.current.scrollWidth - parent.current.clientWidth);
+  };
+
+  useEffect(() => {
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+
+    observer.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            controls
+              .start({ translateX: -50, transition: { duration: 0.5 } })
+              .then(() => {
+                controls.start({
+                  translateX: 0,
+                  transition: { duration: 0.5 },
+                });
+              });
+          }
+        });
+      },
+      {
+        rootMargin: "0px 0px -50% 0px",
+      }
+    );
+
+    observer.current.observe(parent.current);
+
+    return () => {
+      window.removeEventListener("resize", updateWidth);
+      if (observer.current) observer.current.disconnect();
+    };
+  }, [controls]);
+
   return (
-    <div className=" p-8 sm:px-20 sm:py-10 my-12">
+    <div className="w-4/5 my-12 m-auto">
       <h3 className="text-[35px] mb-4"> {title}</h3>
-      <div className="relative">
-        <div
-          className="flex snap-mandatory snap-x overflow-hidden overflow-x-scroll noScrollBar flex-nowrap"
-          ref={parent}>
+      <div className="w-full overflow-hidden overflow-x-scroll noScrollBar flex-nowrap cursor-grab">
+        <motion.div
+          className="flex snap-mandatory snap-x "
+          ref={parent}
+          dragConstraints={{ right: 0, left: -width }}
+          animate={controls}
+          drag="x">
           {array.map((service, index) => {
             return (
-              <div key={index}>
+              <motion.div key={index}>
                 <DraggableServices title={service.title} path={service.path} />
-              </div>
+              </motion.div>
             );
           })}
-        </div>
-        <button
-          className="absolute left-0 top-[35%] translate-x-[-50px]  bg-gray-500 p-2 rounded-full hover:bg-gray-400"
-          onClick={clickLeft}>
-          <ChevronLeftIcon />
-        </button>
-        <button
-          className="absolute right-0 top-[35%] translate-x-[50px]  bg-gray-500 p-2 rounded-full hover:bg-gray-400"
-          onClick={clickRight}>
-          <ChevronRightIcon />
-        </button>
+        </motion.div>
       </div>
     </div>
   );

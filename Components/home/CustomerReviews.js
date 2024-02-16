@@ -4,30 +4,33 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import React, { useEffect, useRef, useState } from "react";
 import ReviewCard from "./ReviewCard";
 import { customerReview } from "@/constants";
-import { useDraggable } from "react-use-draggable-scroll";
+import { motion, useAnimationControls } from "framer-motion";
 
 function CustomerReviews() {
   const parent = useRef();
   const observer = useRef();
+  const [width, setWidth] = useState(0);
+  const controls = useAnimationControls();
+
+  const updateWidth = () => {
+    setWidth(parent.current.scrollWidth - parent.current.clientWidth);
+  };
 
   useEffect(() => {
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
     observer.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const scrollElement = parent.current;
-            const scrollWidth = scrollElement.scrollWidth;
-            const clientWidth = scrollElement.clientWidth;
-            console.log("scroll width", scrollWidth);
-            console.log("client width", clientWidth);
-            if (scrollWidth > clientWidth) {
-              scrollElement.scrollBy({ left: 25, behavior: "smooth" });
-              console.log("scroll started");
-              setTimeout(() => {
-                scrollElement.scrollBy({ left: -25, behavior: "smooth" });
-                console.log("Back to position");
-              }, 200);
-            }
+            controls
+              .start({ translateX: -50, transition: { duration: 0.3 } })
+              .then(() => {
+                controls.start({
+                  translateX: 0,
+                  transition: { duration: 0.3 },
+                });
+              });
           }
         });
       },
@@ -37,19 +40,23 @@ function CustomerReviews() {
     );
     observer.current.observe(parent.current);
     return () => {
+      window.removeEventListener("resize", updateWidth);
       if (observer.current) observer.current.disconnect();
     };
-  }, []);
+  }, [controls]);
 
   return (
     <section className="text-center w-[80%] m-auto my-16 relative ">
       <h2 className="text-xl sxs:text-3xl md:text-5xl my-12">
         What Customers Says about Yimmbs!
       </h2>
-      <div className="flex">
-        <div
+      <div className="overflow-hidden overflow-x-scroll noScrollBar scroll-smooth cursor-grab">
+        <motion.div
+          drag="x"
+          dragConstraints={{ right: 0, left: -width }}
           ref={parent}
-          className="snap-mandatory snap-x flex flex-row overflow-hidden overflow-x-scroll noScrollBar scroll-smooth cursor-grab">
+          animate={controls}
+          className="snap-mandatory snap-x flex flex-row ">
           {customerReview.map((review, index) => (
             <ReviewCard
               key={index + 1}
@@ -57,7 +64,7 @@ function CustomerReviews() {
               index={index + 1}
             />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

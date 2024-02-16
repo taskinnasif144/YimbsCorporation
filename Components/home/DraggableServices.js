@@ -3,14 +3,16 @@ import React from "react";
 
 function DraggableServices({ title, path, id }) {
   return (
-    <div className="text-center snap-center inline-block p-0 m-1 sm:p-3 sm:m-3 rounded-md sm:rounded-3xl unselectable">
-      <Image
-        src={path}
-        alt={title}
-        width={500}
-        height={500}
-        className="min-h-[100px] min-w-[100px] sm:h-[150px] sm:min-w-[260px] object-cover rounded-md  sm:rounded-3xl"
-      />
+    <div className="m-4 mt-12 text-center select-none text-white">
+      <div className="w-48 h-48 rounded-full overflow-hidden border-white border-4">
+        <Image
+          src={path}
+          alt={title}
+          width={500}
+          height={500}
+          className="object-cover select-none"
+        />
+      </div>
 
       <h4 className="text-sm sm:text-xl mt-3 text-whtie"> {title} </h4>
     </div>
