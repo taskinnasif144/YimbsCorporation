@@ -37,17 +37,10 @@ export default function Home() {
 
         <ForHome title={"For Home"} array={forHomeServices} />
 
-        {width < 770 ? (
-          <ForHomeMobile
-            title={"Trending Services"}
-            array={[...forHomeServices].reverse()}
-          />
-        ) : (
-          <ForHome
-            title={"Trending Services"}
-            array={[...forHomeServices].reverse()}
-          />
-        )}
+        <ForHome
+          title={"Trending Services"}
+          array={[...forHomeServices].reverse()}
+        />
 
         <WhyYimbs />
         <CustomerReviews />
