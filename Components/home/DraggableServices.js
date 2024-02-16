@@ -3,7 +3,7 @@ import React from "react";
 
 function DraggableServices({ title, path, id }) {
   return (
-    <div className="m-4 mt-12 text-center select-none text-white">
+    <div className="m-4 mt-6 text-center select-none text-white">
       <div className="w-48 h-48 rounded-full overflow-hidden border-white border-4">
         <Image
           src={path}

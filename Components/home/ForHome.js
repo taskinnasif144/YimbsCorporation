@@ -47,8 +47,8 @@ function ForHome({ title, array }) {
   }, [controls]);
 
   return (
-    <div className="w-4/5 my-12 m-auto">
-      <h3 className="text-[35px] mb-4"> {title}</h3>
+    <div className="w-4/5 my-6 m-auto">
+      <h3 className="text-2xl xs:text-3xl mb-1"> {title}</h3>
       <div className="w-full overflow-hidden overflow-x-scroll noScrollBar flex-nowrap cursor-grab">
         <motion.div
           className="flex snap-mandatory snap-x "

@@ -45,7 +45,7 @@ function Hero2({ count }) {
               stiffness: 100,
               damping: 14,
             }}
-            src={images[(count + 1) % images.length]}
+            src={images[(count + 0) % images.length]}
             className="h-[80%] w-[50%] object-cover inlineblock z-10 absolute top-[10%] left-[25%] translate-x-[-50%] rounded-3xl"
           />
         </AnimatePresence>
@@ -60,7 +60,7 @@ function Hero2({ count }) {
               stiffness: 100,
               damping: 14,
             }}
-            src={images[(count + 0) % images.length]}
+            src={images[(count + 1) % images.length]}
             className="h-[80%] w-[50%]  object-cover absolute top-[40%] right-[-10%] rounded-3xl"
           />
         </AnimatePresence>
