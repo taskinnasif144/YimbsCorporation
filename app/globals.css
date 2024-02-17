@@ -38,7 +38,7 @@ body {
 }
 
 .gradient-grey_to_black {
-  background: linear-gradient(#202020 40%, black);
+  background: linear-gradient(black 40%, #202020);
 
 }
 

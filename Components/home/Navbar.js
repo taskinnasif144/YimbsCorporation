@@ -4,11 +4,15 @@ import Image from "next/image";
 import Logo from "../../public/yimbs-logo.jpg";
 import Link from "next/link";
 import SearchIcon from "@mui/icons-material/Search";
+import { useDispatch } from "react-redux";
+import { toggleAuthDialog } from "@/redux/Slices/AuthDialogSlice";
 
 function Navbar() {
   const [scrollY, setScrollY] = useState(0);
   const [width, setWidth] = useState(0);
   const [hamAni, setHamAni] = useState(false);
+
+  const dispatch = useDispatch();
 
   const updateScrollY = () => {
     const pageYOffset = window.scrollY;
@@ -16,6 +20,13 @@ function Navbar() {
   };
   const updateHam = () => {
     setHamAni(!hamAni);
+  };
+
+  const handleDialog = () => {
+    if (width <= 1024) {
+      updateHam();
+    }
+    dispatch(toggleAuthDialog());
   };
 
   function handleResize() {
@@ -75,9 +86,9 @@ function Navbar() {
           <Link className="mr-4 text-lg" href="/">
             Service
           </Link>
-          <Link className="text-lg" href="/">
+          <div onClick={handleDialog} className="text-lg cursor-pointer">
             Login
-          </Link>
+          </div>
         </div>
 
         {/* Hamburger Icon */}
@@ -118,11 +129,11 @@ function Navbar() {
           className="my-2 py-2 transition-all duration-150 w-full  mr-2 hover:bg-[#333333] text-xs xs:text-lg px-3 rounded-lg  text-gray-400">
           Services
         </Link>
-        <Link
-          href={""}
-          className="my-2 py-2 transition-all duration-150 w-full  mr-2 hover:bg-[#333333]  text-xs xs:text-lg px-3 rounded-lg text-gray-400">
+        <div
+          onClick={handleDialog}
+          className="my-2 py-2 transition-all duration-150 w-full  mr-2 hover:bg-[#333333]  text-xs xs:text-lg px-3 rounded-lg text-gray-400 cursor-pointer">
           Login
-        </Link>
+        </div>
       </div>
       {/* Hamburger Drawer */}
     </header>
