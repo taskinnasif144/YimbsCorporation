@@ -2,6 +2,7 @@
 import { AllServices } from "@/constants";
 import { servicesHoverColor } from "@/constants/ColorConsts";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,8 +11,9 @@ export default function Home() {
         <div className="w-[30%] max-w-52">
           {AllServices.map((val, index) => {
             return (
-              <div
+              <Link
                 key={index}
+                href={`services/#${val.service.title}`}
                 className={`flex flex-col xs:flex-row justify-center items-center m-2 p-2 hover:bg-[${servicesHoverColor}] cursor-pointer select-none rounded-lg`}>
                 <Image
                   alt="logo"
@@ -22,15 +24,18 @@ export default function Home() {
                 />
 
                 <h2 className="text-[12px] text-center">{val.service.title}</h2>
-              </div>
+              </Link>
             );
           })}
         </div>
-        <div className="w-[70%]">
+        <div className="w-[70%] my-4">
           {AllServices.map((val, index) => {
             return (
               <div key={index} className="" id={val.service.title}>
-                <h2 className="text-base text-center ">{val.service.title}</h2>
+                <h2 className="text-xs text-center font-thin">
+                  {val.subServices.length} services in {val.service.title}{" "}
+                  service
+                </h2>
                 {val.subServices.map((sub, index) => {
                   return (
                     <div
