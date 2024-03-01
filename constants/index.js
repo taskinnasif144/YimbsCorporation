@@ -255,6 +255,190 @@ const footerImages = [
   "/clipArts/youtube.png",
 ];
 
+const AllServices = [
+  {
+    service: { title: "AC Servicing", source: "" },
+
+    subServices: [
+      {
+        title: "Basic Service",
+        source: "/services/AC/Basic Service.jpg",
+      },
+      {
+        title: "AC Installation & Uninstallation",
+        source: "/services/AC/AC-Installation-&-Uninstallation.png",
+      },
+      {
+        title: "Compressor fitting with gas refill",
+        source: "/services/AC/Compressor fitting with gas refil.jpg",
+      },
+      {
+        title: "Jet Wash",
+        source: "/services/AC/Jet Wash.jpg",
+      },
+      {
+        title: "Leak Repair",
+        source: "/services/AC/Leak Repair.jpg",
+      },
+      {
+        title: "Master Service",
+        source: "/services/AC/master service.jpg",
+      },
+    ],
+  },
+  {
+    service: { title: "Fridge", source: "" },
+
+    subServices: [
+      {
+        title: "Basic Service",
+        source: "/services/Fridge/fridge basic service.webp",
+      },
+      {
+        title: "Circuit Repair Or Replacement",
+        source: "/services/Fridge/Circuit Repair Or Replacement.jpg",
+      },
+      {
+        title: "Compressor fitting with gas refill",
+        source: "/services/Fridge/compresor repair.jpg",
+      },
+      {
+        title: "Condenser Fitting with gas refill",
+        source: "/services/Fridge/condenser fitting.webp",
+      },
+      {
+        title: "Gasket change",
+        source: "/services/Fridge/Gasket change.jpg",
+      },
+      {
+        title: "Gas refill",
+        source: "/services/Fridge/refrigerator Gas refill.webp",
+      },
+      {
+        title: "Thermostat Replace",
+        source: "/services/Fridge/Thermostat Replace.jpg",
+      },
+    ],
+  },
+  {
+    service: { title: "TV", source: "" },
+
+    subServices: [
+      {
+        title: "Installation",
+        source: "/services/TV/installation.jpg",
+      },
+      {
+        title: "Repair",
+        source: "/services/TV/Repair.jpg",
+      },
+    ],
+  },
+  {
+    service: { title: "Microwave Oven", source: "" },
+
+    subServices: [
+      {
+        title: "Basic services",
+        source: "/services/Microwave Oven/basic services.jpg",
+      },
+      {
+        title: "Buttons not working",
+        source: "/services/Microwave Oven/Buttons not working.jpg",
+      },
+      {
+        title: "Not heating",
+        source: "/services/Microwave Oven/Not heating.jpg",
+      },
+
+      {
+        title: "sparkle/short circuit",
+        source: "/services/Microwave Oven/sparkleshort circuit.jpg",
+      },
+      {
+        title: "Transformer replacement",
+        source: "/services/Microwave Oven/Transformer replacement.jpg",
+      },
+    ],
+  },
+  {
+    service: { title: "Water Purifier", source: "" },
+
+    subServices: [
+      {
+        title: "dismantling",
+        source: "/services/Water Purifier/water purifier dismantling.jpg",
+      },
+      {
+        title: "installation",
+        source: "/services/Water Purifier/water purifier installation.jpg",
+      },
+      {
+        title: "Kit replacement",
+        source: "/services/Water Purifier/water purifier Kit replacement.jpg",
+      },
+
+      {
+        title: "servicing",
+        source: "/services/Water Purifier/water purifier servicing.jpg",
+      },
+    ],
+  },
+  {
+    service: { title: "Kitchen Hood", source: "" },
+    subServices: [
+      {
+        title: "Deep cleaning",
+        source: "/services/Kitchen Hood/Deep cleaning.jpg",
+      },
+      {
+        title: "Installation",
+        source: "/services/Kitchen Hood/Installation.jpg",
+      },
+      {
+        title: "Repair",
+        source: "/services/Kitchen Hood/Repair.jpg",
+      },
+
+      {
+        title: "Shifting",
+        source: "/services/Kitchen Hood/Shifting.jpg",
+      },
+    ],
+  },
+  {
+    service: { title: "Washing machine", source: "" },
+    subServices: [
+      {
+        title: "Basic service",
+        source: "/services/Kitchen Hood/Deep cleaning.jpg",
+      },
+      {
+        title: "Circuit repair",
+        source: "/services/Washing Machine/Washing machine Circuit repair.jpg",
+      },
+      {
+        title: "Gearbox repair/replace",
+        source:
+          "/services/Washing Machine/Washing machine Gearbox repair orreplace.jpg",
+      },
+
+      {
+        title: "installation",
+        source: "/services/Washing Machine/installation.jpg",
+      },
+      {
+        title: "Motor repair/replace",
+        source: "/services/Washing Machine/Motor repair.jpg",
+      },
+      {
+        title: "Water level sensor",
+        source: "/services/Washing Machine/Water level sensor.jpg",
+      },
+    ],
+  },
+];
+
 export {
   locations,
   servicesArray,
@@ -264,4 +448,5 @@ export {
   whyYimbns,
   footerlinks,
   footerImages,
+  AllServices,
 };
