@@ -8,7 +8,6 @@ const LoginRegisterController = () => {
   const isDialog = useSelector(
     (state) => state.authDialog.value.isAuthDialogOpen
   );
-  console.log(isDialog);
   return <div className={` `}>{isDialog && <LoginPage />}</div>;
 };
 

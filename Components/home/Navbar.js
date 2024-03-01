@@ -48,7 +48,7 @@ function Navbar() {
   return (
     <header className="w-full flex flex-col justify-center items-center sticky top-0 left-0 bg-black p-4 z-20">
       <nav className="w-4/5 max-w-[1440px] relative flex justify-between items-center">
-        <div className="flex items-center">
+        <Link className="flex items-center" href="/">
           <Image
             src={Logo}
             alt="logo"
@@ -57,7 +57,7 @@ function Navbar() {
             className="rounded-lg"
           />
           <h1 className="text-3xl sm:text-4xl font-bold">Yimbs</h1>
-        </div>
+        </Link>
 
         {/*  Search-Bar hid, unhid*/}
 
@@ -83,7 +83,7 @@ function Navbar() {
             href="/">
             Join as Proffessional
           </Link>
-          <Link className="mr-4 text-lg" href="/">
+          <Link className="mr-4 text-lg" href="/services">
             Service
           </Link>
           <div onClick={handleDialog} className="text-lg cursor-pointer">
@@ -125,7 +125,7 @@ function Navbar() {
           Join As Proffessional
         </Link>
         <Link
-          href={""}
+          href={"/services"}
           className="my-2 py-2 transition-all duration-150 w-full  mr-2 hover:bg-[#333333] text-xs xs:text-lg px-3 rounded-lg  text-gray-400">
           Services
         </Link>
