@@ -257,8 +257,7 @@ const footerImages = [
 
 const AllServices = [
   {
-    service: { title: "AC Servicing", source: "" },
-
+    service: { title: "AC Servicing", source: "", serviceID: "AC-Servicing" },
     subServices: [
       {
         title: "Basic Service",
@@ -287,8 +286,7 @@ const AllServices = [
     ],
   },
   {
-    service: { title: "Fridge", source: "" },
-
+    service: { title: "Fridge", source: "", serviceID: "Fridge" },
     subServices: [
       {
         title: "Basic Service",
@@ -321,8 +319,7 @@ const AllServices = [
     ],
   },
   {
-    service: { title: "TV", source: "" },
-
+    service: { title: "TV", source: "", serviceID: "TV" },
     subServices: [
       {
         title: "Installation",
@@ -335,8 +332,11 @@ const AllServices = [
     ],
   },
   {
-    service: { title: "Microwave Oven", source: "" },
-
+    service: {
+      title: "Microwave Oven",
+      source: "",
+      serviceID: "Microwave-Oven",
+    },
     subServices: [
       {
         title: "Basic services",
@@ -350,7 +350,6 @@ const AllServices = [
         title: "Not heating",
         source: "/services/Microwave Oven/Not heating.jpg",
       },
-
       {
         title: "sparkle/short circuit",
         source: "/services/Microwave Oven/sparkleshort circuit.jpg",
@@ -362,8 +361,11 @@ const AllServices = [
     ],
   },
   {
-    service: { title: "Water Purifier", source: "" },
-
+    service: {
+      title: "Water Purifier",
+      source: "",
+      serviceID: "Water-Purifier",
+    },
     subServices: [
       {
         title: "dismantling",
@@ -377,7 +379,6 @@ const AllServices = [
         title: "Kit replacement",
         source: "/services/Water Purifier/water purifier Kit replacement.jpg",
       },
-
       {
         title: "servicing",
         source: "/services/Water Purifier/water purifier servicing.jpg",
@@ -385,7 +386,7 @@ const AllServices = [
     ],
   },
   {
-    service: { title: "Kitchen Hood", source: "" },
+    service: { title: "Kitchen Hood", source: "", serviceID: "Kitchen-Hood" },
     subServices: [
       {
         title: "Deep cleaning",
@@ -399,7 +400,6 @@ const AllServices = [
         title: "Repair",
         source: "/services/Kitchen Hood/Repair.jpg",
       },
-
       {
         title: "Shifting",
         source: "/services/Kitchen Hood/Shifting.jpg",
@@ -407,7 +407,11 @@ const AllServices = [
     ],
   },
   {
-    service: { title: "Washing machine", source: "" },
+    service: {
+      title: "Washing machine",
+      source: "",
+      serviceID: "Washing-machine",
+    },
     subServices: [
       {
         title: "Basic service",
@@ -422,7 +426,6 @@ const AllServices = [
         source:
           "/services/Washing Machine/Washing machine Gearbox repair orreplace.jpg",
       },
-
       {
         title: "installation",
         source: "/services/Washing Machine/installation.jpg",
