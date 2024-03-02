@@ -61,7 +61,7 @@ export default function Home() {
                 key={index}
                 onClick={() => scrollTOHash(val.service.serviceID)}
                 id={`${val.service.serviceID}-btn`}
-                className={`flex flex-col xs:flex-row justify-center items-center m-2 p-2  cursor-pointer select-none rounded-lg transition-all scale-1`}>
+                className={`flex flex-col xs:flex-row justify-center items-center m-2 p-2  cursor-pointer select-none rounded-lg transition-all scale-1 hover:bg-[#436850ad]`}>
                 <Image
                   alt="logo"
                   src={"/clipArts/apple.png"}
@@ -91,7 +91,7 @@ export default function Home() {
                   return (
                     <div
                       key={index}
-                      className={`flex items-center my-3  m-2 p-2 rounded-xl border-b-[1px] border-[#436850]`}>
+                      className={`flex items-center my-3  m-2 p-2 rounded-xl border-b-[1px] border-[#436850]  hover:bg-[#436850ad]`}>
                       <Image
                         alt="service image"
                         src={sub.source}
